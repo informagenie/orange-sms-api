@@ -1,0 +1,14 @@
+{
+    "name": "informagenie/orange-api-sms",
+    "description": "Code Sample Orange API RDC",
+    "type": "library",
+    "require": {
+        "ismaeltoe/osms": "@dev"
+    },
+    "authors": [
+        {
+            "name": "Mbungu ngoma",
+            "email": "hackmmn@gmail.com"
+        }
+    ]
+}
