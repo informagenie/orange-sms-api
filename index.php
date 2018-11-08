@@ -5,14 +5,15 @@ require __DIR__.'/vendor/autoload.php';
 if(!empty($_POST)){
 	$datas = array_map('htmlspecialchars', $_POST);
 	
-	$osms = new \Osms\Osms([
-		'clientId' => 'QTv1rg2bwW4H28npH9P9F8oO0lknMIWk',
-		'clientSecret' => 'ZQQYz5BauAAHWakA'
-	]);
+	$credential = [
+		'clientId' => 'Client_ID',
+		'clientSecret' => 'Client_Secret'
+	];
+	$osms = new Osms\Osms($credential);
 
-	$osms->getTokenFromConsumerKey();
+	$token = $osms->getTokenFromConsumerKey();
 
-	print_r($osms->sendSMS('Goms', 'tel:'.$datas['tel'], $datas['content']));
+	$osms->sendSMS('tel:+243894066153', 'tel:' . $datas['tel'], $datas['content'], 'Informagenie');
 }
 
 ?>

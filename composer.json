@@ -10,5 +10,10 @@
             "name": "Mbungu ngoma",
             "email": "hackmmn@gmail.com"
         }
-    ]
+    ],
+	"autoload": {
+		"psr-4": { 
+			"Informagenie\\": "src/"
+		}
+	}
 }
